@@ -10,7 +10,7 @@ namespace Generic
     {
         public void Min()
         {
-            Console.WriteLine("Enter three floating-point numbers:");
+            Console.WriteLine("Enter three int-point numbers:");
             int num_one = int.Parse(Console.ReadLine());
             int num_two = int.Parse(Console.ReadLine());
             int num_three = int.Parse(Console.ReadLine());
