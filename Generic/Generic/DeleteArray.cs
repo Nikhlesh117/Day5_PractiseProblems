@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Generic
 {
-    public class DeleteArray
+    public class DeleteArray<T>
     {
-        public void DeleteElement<T>(T[] arr, int index)
+        public void Delete(T[] arr, int index)
         {
             if (index < 0 || index >= arr.Length)
             {
@@ -30,7 +30,6 @@ namespace Generic
             {
                 Console.Write($"{new_arr[i]} ");
             }
-            //Console.WriteLine();
         }
     }
 }

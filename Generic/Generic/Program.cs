@@ -10,16 +10,18 @@ namespace Generic
     {
         public static void Main(string[] args)
         {
-            DeleteArray deleteArray = new DeleteArray();
+            int[] int_arr = { 1, 2, 3, 4, 5 };
+            double[] double_arr = { 1.1, 2.2, 3.3, 4.4, 5.5 };
+            char[] char_arr = { 'a', 'b', 'c', 'd', 'e' };
 
-            int[] int_arr = new int[] { 1, 2, 3, 4, 5 };
-            deleteArray.DeleteElement<int>(int_arr, 2); 
+            DeleteArray<int> int_utils = new DeleteArray<int>();
+            int_utils.Delete(int_arr, 2);
 
-            double[] double_arr = new double[] { 1.0, 2.0, 3.0, 4.0, 5.0 };
-            deleteArray.DeleteElement<double>(double_arr, 4); 
+            DeleteArray<double> double_utils = new DeleteArray<double>();
+            double_utils.Delete(double_arr, 4);
 
-            char[] char_arr = new char[] { 'a', 'b', 'c', 'd', 'e' };
-            deleteArray.DeleteElement<char>(char_arr, 1);
+            DeleteArray<char> char_utils = new DeleteArray<char>();
+            char_utils.Delete(char_arr, 1);
 
             Console.ReadKey();
         }
