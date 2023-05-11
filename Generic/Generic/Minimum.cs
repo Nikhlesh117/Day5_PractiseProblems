@@ -10,12 +10,12 @@ namespace Generic
     {
         public void Min()
         {
-            Console.WriteLine("Enter three int-point numbers:");
-            int num_one = int.Parse(Console.ReadLine());
-            int num_two = int.Parse(Console.ReadLine());
-            int num_three = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter three float-point numbers:");
+            float num_one = float.Parse(Console.ReadLine());
+            float num_two = float.Parse(Console.ReadLine());
+            float num_three = float.Parse(Console.ReadLine());
 
-            int min = num_one;
+            float min = num_one;
             if (num_two < min)
             {
                 min = num_two;
