@@ -10,7 +10,7 @@ namespace Generic
     {
         public static void Main(string[] args)
         {
-            int[] int_arr = { 1, 2, 3, 4, 5 };
+            /*int[] int_arr = { 1, 2, 3, 4, 5 };
             double[] double_arr = { 1.1, 2.2, 3.3, 4.4, 5.5 };
             char[] char_arr = { 'a', 'b', 'c', 'd', 'e' };
 
@@ -21,7 +21,9 @@ namespace Generic
             double_utils.Delete(double_arr, 4);
 
             DeleteArray<char> char_utils = new DeleteArray<char>();
-            char_utils.Delete(char_arr, 1);
+            char_utils.Delete(char_arr, 1);*/
+            Minimum minimum = new Minimum();
+            minimum.Min();
 
             Console.ReadKey();
         }
