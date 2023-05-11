@@ -22,16 +22,17 @@ namespace Generic
 
             DeleteArray<char> char_utils = new DeleteArray<char>();
             char_utils.Delete(char_arr, 1);*/
-            Minimum minimum = new Minimum();
+            int int1 = 5, int2 = 10, int3 = 3;
+            Minimum<int> intMinimum = new Minimum<int>(int1, int2, int3);
+            intMinimum.TestMinimum();
 
-            int intMin = minimum.Min<int>(5, 6, 9);
-            Console.WriteLine("Int Min : " + intMin);
+            double double1 = 2.5, double2 = 1.2, double3 = 3.8;
+            Minimum<double> doubleMinimum = new Minimum<double>(double1, double2, double3);
+            doubleMinimum.TestMinimum();
 
-            double floatMin = minimum.Min<double>(2.2, 4.2, 8.2);
-            Console.WriteLine("Int Min : " + floatMin);
-
-            string stringMin = minimum.Min<string>("Apple", "Mango", "Banana");
-            Console.WriteLine("Int Min : " + stringMin);
+            string string1 = "apple", string2 = "banana", string3 = "cherry";
+            Minimum<string> stringMinimum = new Minimum<string>(string1, string2, string3);
+            stringMinimum.TestMinimum();
 
             Console.ReadKey();
         }

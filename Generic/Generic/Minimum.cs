@@ -6,20 +6,37 @@ using System.Threading.Tasks;
 
 namespace Generic
 {
-    public class Minimum
+    public class Minimum<T> where T : IComparable<T>
     {
-        public T Min<T>(T value_one, T value_two, T value_three) where T : IComparable<T>
+        private T a;
+        private T b;
+        private T c;
+
+        public Minimum(T a, T b, T c)
         {
-            T minimum = value_one;
-            if (value_two.CompareTo(minimum) < 0)
+            this.a = a;
+            this.b = b;
+            this.c = c;
+        }
+
+        public T Min()
+        {
+            T min = a;
+            if (b.CompareTo(min) < 0)
             {
-                minimum = value_two;
+                min = b;
             }
-            if (value_three.CompareTo(minimum) < 0)
+            if (c.CompareTo(min) < 0)
             {
-                minimum = value_three;
+                min = c;
             }
-            return minimum;
+            return min;
+        }
+
+        public void TestMinimum()
+        {
+            T min = Min();
+            Console.WriteLine($"The minimum of {a}, {b}, and {c} is {min}");
         }
     }
 }
