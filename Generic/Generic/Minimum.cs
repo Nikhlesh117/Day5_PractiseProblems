@@ -8,24 +8,18 @@ namespace Generic
 {
     public class Minimum
     {
-        public void Min()
+        public T Min<T>(T value_one, T value_two, T value_three) where T : IComparable<T>
         {
-            Console.WriteLine("Enter three String-point numbers:");
-            string str_one = Console.ReadLine();
-            string str_two = Console.ReadLine();
-            string str_three = Console.ReadLine();
-
-            string min = str_one;
-            if (str_two.CompareTo(min) < 0)
+            T minimum = value_one;
+            if (value_two.CompareTo(minimum) < 0)
             {
-                min = str_two;
+                minimum = value_two;
             }
-            if (str_three.CompareTo(min) < 0)
+            if (value_three.CompareTo(minimum) < 0)
             {
-                min = str_three;
+                minimum = value_three;
             }
-
-            Console.WriteLine("Minimum value is: " + min);
+            return minimum;
         }
     }
 }
