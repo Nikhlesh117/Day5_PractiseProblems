@@ -15,7 +15,7 @@ namespace Generic
             int num_two = int.Parse(Console.ReadLine());
             int num_three = int.Parse(Console.ReadLine());
 
-            float min = num_one;
+            int min = num_one;
             if (num_two < min)
             {
                 min = num_two;
