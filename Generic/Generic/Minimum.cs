@@ -10,19 +10,19 @@ namespace Generic
     {
         public void Min()
         {
-            Console.WriteLine("Enter three float-point numbers:");
-            float num_one = float.Parse(Console.ReadLine());
-            float num_two = float.Parse(Console.ReadLine());
-            float num_three = float.Parse(Console.ReadLine());
+            Console.WriteLine("Enter three String-point numbers:");
+            string str_one = Console.ReadLine();
+            string str_two = Console.ReadLine();
+            string str_three = Console.ReadLine();
 
-            float min = num_one;
-            if (num_two < min)
+            string min = str_one;
+            if (str_two.CompareTo(min) < 0)
             {
-                min = num_two;
+                min = str_two;
             }
-            if (num_three < min)
+            if (str_three.CompareTo(min) < 0)
             {
-                min = num_three;
+                min = str_three;
             }
 
             Console.WriteLine("Minimum value is: " + min);
